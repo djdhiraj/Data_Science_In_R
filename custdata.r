@@ -11,5 +11,8 @@ summary(data_set)
 data_set_new<-data_set %>% drop_na()
 View(data_set_new)
 summary(data_set_new)
+#After removng the all missing values now we trying to plot maximum numberg graphs  
+data_set_new %>% hist(data_set_new$age) # this command gives us more the ne histogram
+
 
 
