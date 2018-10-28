@@ -19,6 +19,17 @@ data_set_filter<-funtion(data){
  }
 New_data<-data_set_filter(data_set_new)
 summary(New_data)
-
+New_data %>% plot(income~age,data=.)
+New_data %>% lm(income~age,data=.) %>% abline(col='red')
+New_data %>% qplot(income,age,color=health.ins,data=.)
+New_data %>% qplot(income,data=.,geom ="density")
+New_data %>% ggplot(aes(x = income , y = age)) +
++     geom_point() + geom_smooth(method = "lm")
+New_data %>% ggplot(aes(x = income , y = age)) +
++     geom_point() + geom_smooth()
+ggplot(custdata) +
+geom_bar(aes(x=state.of.res), fill="gray") +
+coord_flip() +
+theme(axis.text.y=element_text(size=rel(0.8)))
 
 
