@@ -31,5 +31,21 @@ ggplot(custdata) +
 geom_bar(aes(x=state.of.res), fill="gray") +
 coord_flip() +
 theme(axis.text.y=element_text(size=rel(0.8)))
+#Examining the correlation between age and income
+ggplot(custdata2, aes(x=age, y=income)) + geom_point() +
++     stat_smooth(method="lm") +
++     ylim(0, 200000)
+#Since the output is positive number this shows that the age and income have positive 
+#relationship if age increse then the income also in crease 
+ggplot(New_data, aes(x=age, y=income)) + geom_point() +
++     stat_smooth(method="lm") +
++     ylim(0, 200000)
+#A scatter plot with a smoothing curve also makes a good visualization of the relationship
+#between a continuous variable and a Boolean.
+ggplot(New_data, aes(x=age, y=income)) + geom_point() +
++     stat_smooth() +
++     ylim(0, 200000)
+#Relationship between age and health insurance 
+ggplot(New_data,aes(x=age,y=as.numeric(health.ins)))+geom_point(position=position_jitter(w=0.05, h=0.05))+geom_smooth()
 
 
