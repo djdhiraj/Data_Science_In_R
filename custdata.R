@@ -19,6 +19,10 @@ data_set_filter<-funtion(data){
  }
 New_data<-data_set_filter(data_set_new)
 summary(New_data)
+xtabs(recent.move~sex+age,data=df1)
+xtabs(recent.move~sex+state.of.res,data=df1)
+xtabs(marital.stat~sex+housing.type,data=df1)
+xtabs(marital.stat~housing.type,data=df1)
 New_data %>% plot(income~age,data=.)
 New_data %>% lm(income~age,data=.) %>% abline(col='red')
 New_data %>% qplot(income,age,color=health.ins,data=.)
