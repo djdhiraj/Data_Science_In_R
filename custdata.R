@@ -51,5 +51,5 @@ ggplot(New_data, aes(x=age, y=income)) + geom_point() +
 +     ylim(0, 200000)
 #Relationship between age and health insurance 
 ggplot(New_data,aes(x=age,y=as.numeric(health.ins)))+geom_point(position=position_jitter(w=0.05, h=0.05))+geom_smooth()
-
+col2=ifelse(dTest$health.ins<0.5,"FALSE","TRUE")#convert percents value in True and false condition
 
