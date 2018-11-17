@@ -1,0 +1,51 @@
+---
+title: "Assigment8"
+output: html_document
+---
+
+Data Manipulition
+The apply() functions form the basis of more complex combinations and helps to perform operations with very few lines of code. More specifically, the family is made up of the 
+* apply()
+
+* lapply()
+
+* sapply()
+
+* tapply() 
+
+* by functions.
+
+# How To Use apply() in R
+
+Let’s start with the apply(), which operates on arrays.
+
+The R base manual tells you that it’s called as follows: apply(X, MARGIN, FUNCTION)
+
+where:
+* X is an array or a matrix if the dimension of the array is 2;
+
+* MARGIN is a variable defining how the function is applied,
+when
+
+* MARGIN=1, it applies over rows,
+```{r}
+m<-matrix(c(1,2,3,4),2,2)
+m 
+apply(m,1,sum)
+apply(m,2,sum)
+apply(m,1,mean)
+apply(m,2,mean)
+
+```
+
+whereas with
+
+* MARGIN=2, it works over columns.
+
+* FUNCTION which is the function that you want to apply to the data. It can be any R function, including a User Defined Function (UDF).
+
+# By this command you can  use Apply() function.
+ 
+#The lapply() Function
+
+You want to apply a given function to every element of a list and obtain a list as result. When you execute ?lapply, you see that the syntax looks like the apply() function.
