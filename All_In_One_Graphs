@@ -47,6 +47,23 @@ plot(mtcars$mpg, mtcars$disp,type="s")
 plot(mtcars$mpg, mtcars$disp,type="s")
 plot(mtcars$mpg, mtcars$disp,type="n")
 #par() funtions can be used to set or query graphical parameters.parameters can be set by specifiying them as argument to pair in tag = values form, by passing them as a list of tags values.
+names(par())
+length(names(par()))
+par(mfrow=c(2,2))
+plot(anscombe$x1,anscombe$y1)
+plot(anscombe$x2,anscombe$y2)
+plot(anscombe$x2,anscombe$y2)
+plot(anscombe$x2,anscombe$y2)
+xmin<-min(anscombe$x1,anscombe$x2,anscombe$x3,anscombe$x4)
+xmax<-max(anscombe$x1,anscombe$x2,anscombe$x3,anscombe$x4)
+ymin<-min(anscombe$y1,anscombe$y2,anscombe$y3,anscombe$y4)
+ymax<-max(anscombe$y1,anscombe$y2,anscombe$y3,anscombe$y4)
+plot(anscombe$x1,anscombe$y1,xlim=c(xmin,xmax),ylim=c(ymin,ymax),main="first dataset")
+plot(anscombe$x2,anscombe$y2,xlim=c(xmin,xmax),ylim=c(ymin,ymax),main="second dataset")
+plot(anscombe$x3,anscombe$y3,xlim=c(xmin,xmax),ylim=c(ymin,ymax),main="third dataset")
+plot(anscombe$x4,anscombe$y4,xlim=c(xmin,xmax),ylim=c(ymin,ymax),main="forth dataset")
+colors()
+rainbow(n)
 
 
 
