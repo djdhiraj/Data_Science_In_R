@@ -1,0 +1,52 @@
+data(cars)
+data("mtcars")
+View(mtcars)
+plot(mtcars$mpg,mtcars$disp)
+plot(mtcars$mpg,mtcars$disp,type="p")
+round(max(mtcars$mpg))
+plot(mtcars$mpg,mtcars$disp,type="p",xlim=round(max(mtcars$mpg)),ylim = max(mtcars$cyl))
+max_mpq<-round(max(mtcars$mpg))
+plot(mtcars$mpg,mtcars$disp,type="p",xlim=max_mpg,ylim = max(mtcars$cyl))
+max_disp<-(max(mtcars$disp))
+max_disp
+plot(mtcars$mpg,mtcars$disp,type="p",xlim=c(0,max_mpg),ylim = c(0,max_disp))
+plot(mtcars$mpg,mtcars$disp,type="p",xlim=c(0,max_mpg),ylim = c(0,max_disp),main = "Mpg vs disp")
+plot(mtcars$mpg,mtcars$disp,type="p",xlim=c(0,max_mpg),ylim = c(0,max_disp),main = "Mpg vs disp",xlab="Hourspower",ylab ="distance" )
+#type = "p" stand for point
+#type = "l" stand for lines
+#type = "b" stand for both
+#type = "c" stand for lines part along of of "b"
+#type = "o" stand for overplotted
+#type = "h" stand for histogram like(or high - density verticle lines,
+#type = "s" stand for stair steps 
+#type = "s" stand for other steps, see Details below
+#type = "n" for no plotting 
+plot(mtcars$mpg, mtcars$disp,type="p")
+plot(mtcars$mpg, mtcars$disp,type="l")
+plot(mtcars$mpg, mtcars$disp,type="b")
+plot(mtcars$mpg, mtcars$disp,type="c")
+plot(mtcars$mpg, mtcars$disp,type="o")
+plot(mtcars$mpg, mtcars$disp,type="h")
+plot(mtcars$mpg, mtcars$disp,type="s")
+plot(mtcars$mpg, mtcars$disp,type="s")
+plot(mtcars$mpg, mtcars$disp,type="n")#type = "l" stand for lines
+#type = "b" stand for both
+#type = "c" stand for lines part along of of "b"
+#type = "o" stand for overplotted
+#type = "h" stand for histogram like(or high - density verticle lines,
+#type = "s" stand for stair steps 
+#type = "s" stand for other steps, see Details below
+#type = "n" for no plotting 
+plot(mtcars$mpg, mtcars$disp,type="p")
+plot(mtcars$mpg, mtcars$disp,type="l")
+plot(mtcars$mpg, mtcars$disp,type="b")
+plot(mtcars$mpg, mtcars$disp,type="c")
+plot(mtcars$mpg, mtcars$disp,type="o")
+plot(mtcars$mpg, mtcars$disp,type="h")
+plot(mtcars$mpg, mtcars$disp,type="s")
+plot(mtcars$mpg, mtcars$disp,type="s")
+plot(mtcars$mpg, mtcars$disp,type="n")
+#par() funtions can be used to set or query graphical parameters.parameters can be set by specifiying them as argument to pair in tag = values form, by passing them as a list of tags values.
+
+
+
