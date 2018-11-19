@@ -64,6 +64,12 @@ plot(anscombe$x3,anscombe$y3,xlim=c(xmin,xmax),ylim=c(ymin,ymax),main="third dat
 plot(anscombe$x4,anscombe$y4,xlim=c(xmin,xmax),ylim=c(ymin,ymax),main="forth dataset")
 colors()
 rainbow(n)
-
+lines(mtcars$mpg)
+points(mtcars$mpg,mtcars$disp,pch="1")
+barplot(mtcars$mpg,mtcars$disp,)
+hist(mtcars$mpg)
+#Colored histogram
+hist(mtcars$mpg,breaks=4,col="lightblue",xlab = "x axis",ylab = "y axis")
+hist(mtcars$mpg,breaks=4,col=rainbow(5),xlab="x axis",ylab = "y axis")
 
 
