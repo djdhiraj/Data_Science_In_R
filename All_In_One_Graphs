@@ -71,5 +71,48 @@ hist(mtcars$mpg)
 #Colored histogram
 hist(mtcars$mpg,breaks=4,col="lightblue",xlab = "x axis",ylab = "y axis")
 hist(mtcars$mpg,breaks=4,col=rainbow(5),xlab="x axis",ylab = "y axis")
+library(RColorBrewer)
+data(VADeaths)
+par(mfrow=c(2,3))
+hist(VADeaths,breaks=10, col=brewer.pal(3,"Set3"),main="Set3 3 colors")
+hist(VADeaths,breaks=3 ,col=brewer.pal(3,"Set2"),main="Set2 3 colors")
+hist(VADeaths,breaks=7, col=brewer.pal(3,"Set1"),main="Set1 3 colors")
+hist(VADeaths,,breaks= 2, col=brewer.pal(8,"Set3"),main="Set3 8 colors")
+hist(VADeaths,col=brewer.pal(8,"Greys"),main="Greys 8 colors")
+hist(VADeaths,col=brewer.pal(8,"Greens"),main="Greens 8 colors")
+#Simple Line Plot
+plot(AirPassengers,type="l") 
+barplot(iris$Petal.Length) #Creating simple Bar Graph
+barplot(iris$Sepal.Length,col  = brewer.pal(3,"Set1"))
+barplot(table(iris$Species,iris$Sepal.Length),col  = brewer.pal(3,"Set1")) 
+#Stacked Plot
+boxplot(iris$Petal.Length~iris$Species) #Creating Box Plot between two variable
+plot(x=iris$Petal.Length) #Simple Scatter Plot
+plot(x=iris$Petal.Length,y=iris$Species) #Multivariate Scatter Plot
+plot(iris,col=brewer.pal(3,"Set1"))
+plot(iris,col=brewer.pal(3,"Set1"))
+pie(table(iris$Species))
+library(hexbin)
+a=hexbin(diamonds$price,diamonds$carat,xbins=40)
+library(RColorBrewer)
+plot(a)
+rf <- colorRampPalette(rev(brewer.pal(40,'Set3')))
+hexbinplot(diamonds$price~diamonds$carat, data=diamonds, colramp=rf)
+data(HairEyeColor)
+mosaicplot(HairEyeColor)
+heatmap(as.matrix(mtcars))
+image(as.matrix(b[2:7]))
+library(magrittr)
+library(leaflet)
+m <- leaflet() %>%
+addTiles() %>%  # Add default OpenStreetMap map tiles
+addMarkers(lng=77.2310, lat=28.6560, popup="The delicious food of chandni chowk")
+m  # Print the map
+data(iris, package="datasets")
+scatter3d(Petal.Width~Petal.Length+Sepal.Length|Species, data=iris, fit="linear"
+residuals=TRUE, parallel=FALSE, bg="black", axis.scales=TRUE, grid=TRUE, ellipsoid=FALSE)
+attach(iris)# 3d scatterplot by factor level
+cloud(Sepal.Length~Sepal.Width*Petal.Length|Species, main="3D Scatterplot by Species")
+xyplot(Sepal.Width ~ Sepal.Length, iris, groups = iris$Species, pch= 20)
 
 
