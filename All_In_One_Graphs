@@ -114,5 +114,33 @@ residuals=TRUE, parallel=FALSE, bg="black", axis.scales=TRUE, grid=TRUE, ellipso
 attach(iris)# 3d scatterplot by factor level
 cloud(Sepal.Length~Sepal.Width*Petal.Length|Species, main="3D Scatterplot by Species")
 xyplot(Sepal.Width ~ Sepal.Length, iris, groups = iris$Species, pch= 20)
+#Correletion graph with every other point in the data set.
+cordata<-cor(mtcars)
+corrplot(cordata)
+corrplot(cordata,method = "ellipse")
+corrplot(cordata,method = "circle")
+corrplot(cordata,method = "square")
+corrplot(cordata,method = "pie")
+corrplot(cordata,method = "number")
+corrplot(cordata,method = "shade")
+corrplot(cordata,method = "color")
+#Different type of layout in corrplot()
+corrplot(cordata,type="upper")
+corrplot(cordata,type="lower")
+corrplot(cordata,type="full")
+correcorrplot.mixed(cordata)
+corrplot.mixed(cordata, lower.col = "black", number.cex = .7)
+corrplot.mixed(cordata, lower = "ellipse", upper = "circle")
+corrplot.mixed(cordata, lower = "square", upper = "circle", tl.col = "black")
+corrplot(cordata, order = "AOE")
+corrplot(cordata, order = "hclust")
+corrplot(cordata, order = "FPC")
+corrplot(cordataM, order = "alphabet")
+corrplot(cordata, order = "alphabet")
+corrplot(cordata, order = "hclust", addrect = 2)
+corrplot(cordata, order = "hclust", addrect = 3)
+corrplot(cordata, type = "upper", order = "hclust",
+col = c("black", "white"), bg = "lightblue")
+
 
 
