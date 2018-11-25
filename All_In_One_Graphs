@@ -46,7 +46,8 @@ plot(mtcars$mpg, mtcars$disp,type="h")
 plot(mtcars$mpg, mtcars$disp,type="s")
 plot(mtcars$mpg, mtcars$disp,type="s")
 plot(mtcars$mpg, mtcars$disp,type="n")
-#par() funtions can be used to set or query graphical parameters.parameters can be set by specifiying them as argument to pair in tag = values form, by passing them as a list of tags values.
+#par() funtions can be used to set or query graphical parameters.parameters can be set by specifiying them as 
+#argument to pair in tag = values form, by passing them as a list of tags values.
 names(par())
 length(names(par()))
 par(mfrow=c(2,2))
@@ -212,7 +213,8 @@ corrplot(M2)
 corrplot(M2, na.label = "o")
 corrplot(M2, na.label = "NA")
 #Using “plotmath” expressions in labels
-#Since version 0.78, it is possible to use plotmath expression in variable names. To activate plotmath rendering, prefix your label with one of the characters ":", "=" or "$".
+#Since version 0.78, it is possible to use plotmath expression in variable names.
+#To activate plotmath rendering, prefix your label with one of the characters ":", "=" or "$".
 
 M2 <- M[1:5,1:5]
 colnames(M2) <- c("alpha", "beta", ":alpha+beta", ":a[0]", "=a[beta]")
@@ -267,8 +269,8 @@ corrplot(M, type = "upper", order = "hclust",
 # Leave blank on no significant coefficient
 corrplot(M, type = "upper", order = "hclust", 
          p.mat = p.mat, sig.level = 0.01, insig = "blank")
-#In the above figure, correlations with p-value > 0.01 are considered as insignificant. In this case the correlation coefficient values are leaved blank or crosses are added.
-
+#In the above figure, correlations with p-value > 0.01 are considered as insignificant. 
+#In this case the correlation coefficient values are leaved blank or crosses are added.
 col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
 corrplot(M, method = "color", col = col(200),
          type = "upper", order = "hclust", number.cex = .7,
