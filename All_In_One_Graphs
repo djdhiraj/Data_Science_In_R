@@ -346,5 +346,28 @@ facet layer
 mtcars$am[which(mtcars$am==0)]<-"automatic"
 mtcars$am[which(mtcars$am==1)]<-"automatic"
 mtcars$am[which(mtcars$am==1)]<-"Manual"
+mtcars$<-as.factor(mtcars$am)
+mtcars$am<-as.factor(mtcars$am)
+ggplot(mtcars,aes(x=wt,y=mpg,shape=factor(cyl),col=qsec))+geom_point()
+#Basic scatter plot
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(am~cyl)
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+stat_smooth(method=lm,col="red")
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+stat_smooth()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+stat_smooth(method=lm)
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+stat_smooth(method=lm,se=FALSE)
+ggplot(mtcars,aes(x=wt,y=mpg))+stat_smooth(method=lm,se=FALSE)
+ggplot(mtcars,aes(x=wt,y=mpg))+stat_smooth(method=lm,se=FALSE)+scale_y_continuous("mpg",limits=c(2,35),expand=c(0,0))+scale_x_continuous("wt",limits=c(0,20))
+ggplot(mtcars,aes(x=wt,y=mpg))+stat_smooth(method=lm,se=FALSE)+scale_y_continuous("mpg",limits=c(2,35),expand=c(0,0))+scale_x_continuous("wt",limits=c(0,20)expand=c(0,0))
+ggplot(mtcars,aes(x=wt,y=mpg))+stat_smooth(method=lm,se=FALSE)+scale_y_continuous("mpg",limits=c(2,35),expand=c(0,0))+scale_x_continuous("wt",limits=c(0,20)expand=c(0,0))+coord_equal()
+ggplot(mtcars,aes(x=wt,y=hp,col=am))+geom_point()
+ggplot(mtcars,aes(x=wt,y=hp,col=am))+geom_point()+coord_cartesian(xlim=c(3,6))
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darklight"))
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey"))
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey",color="black"),size=3)
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey",color="black",size=3))
+
 
 
