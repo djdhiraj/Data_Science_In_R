@@ -215,7 +215,6 @@ corrplot(M2, na.label = "NA")
 #Using “plotmath” expressions in labels
 #Since version 0.78, it is possible to use plotmath expression in variable names.
 #To activate plotmath rendering, prefix your label with one of the characters ":", "=" or "$".
-
 M2 <- M[1:5,1:5]
 colnames(M2) <- c("alpha", "beta", ":alpha+beta", ":a[0]", "=a[beta]")
 rownames(M2) <- c("alpha", "beta", NA, "$a[0]", "$ a[beta]")
@@ -223,7 +222,6 @@ corrplot(M2)
 #Combining correlogram with the significance test
 res1 <- cor.mtest(mtcars, conf.level = .95)
 res2 <- cor.mtest(mtcars, conf.level = .99)
-
 ## specialized the insignificant value according to the significant level
 corrplot(M, p.mat = res1$p, sig.level = .2)
 corrplot(M, p.mat = res1$p, sig.level = .05)
@@ -303,20 +301,6 @@ ggplot(mpg, aes(displ, colour = class)) +
 geom_polygon()
 ggplot(mpg, aes(displ,cyl, colour = class)) +
 geom_polygon()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 library(ggplot2)
 ggplot(mtcars,aes(x=wt,y=mpg))
 ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()
@@ -368,6 +352,16 @@ ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.backgro
 ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey"))
 ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey",color="black"),size=3)
 ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey",color="black",size=3))
-
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme(plot.background = element_rect(fill="darkgrey",color="black",size=3))
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_classic()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_bw()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_dark()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_gray()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_get()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_grey()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_light()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_linedraw()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_set()
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()+facet_grid(.~cyl)+theme_replace()
 
 
