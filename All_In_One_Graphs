@@ -317,5 +317,34 @@ geom_polygon()
 
 
 
+library(ggplot2)
+ggplot(mtcars,aes(x=wt,y=mpg))
+ggplot(mtcars,aes(x=wt,y=mpg))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg),col=disp)+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg),col=factor(cyl)+geom_point()
+)
+ggplot(mtcars,aes(x=wt,y=mpg),col=factor(cyl))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg,col=disp))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg,col=disp,shape=factor(disp)))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg,col=disp,shape=factor(cyl)))+geom_point()
+ggplot(mtcars,aes(x=wt,y=mpg,col=disp,size=disp))+geom_point()
+ggplot(mtcars,aes(x=factor(cyl)))+geom_point()
+ggplot(mtcars,aes(x=factor(cyl)))+geom_bar()
+ggplot(mtcars,aes(x=factor(cyl),fill=factor(am)))+geom_bar()
+ggplot(mtcars,aes(x=factor(cyl),fill=factor(mpg)))+geom_bar()
+#Histogram
+ggplot(mtcars,aes(x=mpg))+geom_histogram()
+ggplot(mtcars,aes(x=mpg))+geom_histogram(binwidth = 5)
+ggplot(mtcars,aes(x=mpg))+geom_histogram(binwidth = 5,color="black")
+#Density plot
+ggplot(mtcars,aes(x=factor(cyl),y=mpg))+geom_boxplot(color="black")
+ggplot(mtcars,aes(x=factor(cyl),y=mpg))+geom_density(color="black")
+ggplot(mtcars,aes(x=factor(cyl))+geom_density(color="black")
+)
+ggplot(mtcars,aes(x=mpg))+geom_density(color="black")
+facet layer
+mtcars$am[which(mtcars$am==0)]<-"automatic"
+mtcars$am[which(mtcars$am==1)]<-"automatic"
+mtcars$am[which(mtcars$am==1)]<-"Manual"
 
 
