@@ -278,6 +278,29 @@ corrplot(M, method = "color", col = col(200),
          p.mat = p.mat, sig.level = 0.01, insig = "blank", 
          # hide correlation coefficient on the principal diagonal
          diag = FALSE)
+ggplot(x=mpg,y=cyl)
+ggplot(x=mpg,y=cyl,aes(x=mpg))
+ggplot(x=mpg,y=cyl,aes(x=mpg,y=cyl))
+ggplot(mpg)
+ggplot(mpg,cyl)
+ggplot(x=mpg,y=cyl,aes(x=mpg,y=cyl))
+ggplot(x=mtcars$mpg,y=mtcars$cyl)
+ggplot(x=mtcars$mpg,y=mtcars$cyl,aes(x=mpg))
+plot(mtcars)
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+geom_point()
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+geom_histogram()
+ggplot(mpg, aes(displ, colour = class)) +
+geom_histogram()
+ggplot(mpg,cyl, aes(displ, colour = class)) +
+geom_histogram()
+ggplot(mpg, aes(displ, colour = class)) +
+geom_histogram()
+ggplot(mpg, aes(displ, colour = class)) +
+geom_polygon()
+ggplot(mpg, aes(displ,cyl, colour = class)) +
+geom_polygon()
 
 
 
