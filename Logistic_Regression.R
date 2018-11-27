@@ -1,0 +1,22 @@
+library(car)
+library(MASS)
+library(caTools)
+split<-sample.split(mtcars,SplitRatio = 0.7)
+train<-subset(mtcars,split=="TRUE")
+test<-subset(mtcars,split=="FALSE")
+model<-glm(vs~.,data=mtcars)
+final_model<-stepAIC(model,direction = "both")
+final_model<-glm(vs ~ cyl + hp + wt + qsec, data = mtcars)
+summary(final_model)
+fitted_result<-predict(final_model,test,type="response")
+fitted_result
+test$vs
+fitted_result<-ifelse(fitted_result>0.5,1,0)
+Table_result<-table(fitted_result,test$vs)
+Table_result
+misClassError<-mean(fitted_result !=test$vs)
+print(paste('Accuracy=',misClassError))
+ROCRpred<-prediction(fitted_result,test$vs)
+ROCRPref<-performance(ROCRpred,measure = "tpr",x.measure = "fpr")
+plot(ROCRPref)
+plot(ROCRPref,colorize="TRUE")
