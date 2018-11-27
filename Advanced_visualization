@@ -1,0 +1,6 @@
+To calculate the geographic distance between two points with latitude/longitude coordinates, you can use several formula's. The package geosphere has the 
+distCosine, distHaversine, distVincentySphere and distVincentyEllipsoid for calculating the distance. Of these,
+the distVincentyEllipsoid is considered the most accurate one, but is computationally more intensive than the other ones.
+
+With one of these functions, you can make a distance matrix. Based on that matrix you can then assign locality names based on shortest
+distance with which. min and the corresponding distance with min (see for this the last part of the answer) like this:
