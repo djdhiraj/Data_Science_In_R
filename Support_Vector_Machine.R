@@ -1,0 +1,15 @@
+library(e1071)
+model_svm<-svm(Churn~.,data=train,method="class")
+summary(model_svm)
+model_svm<-svm(Churn~.,data=train,method="class",gamma=0.03,cost=1)
+summary(model_svm)
+test$Churn_predict<-predict(model_svm,test)
+table_svm<-table(test$Churn,test$Churn_predict)
+table_svm
+test$Churn_predict<-ifelse(test$Churn_predict>0.5,1,0)
+table_svm<-table(test$Churn,test$Churn_predict)
+table_svm
+Confusion_Matrix_Svm<-confusionMatrix(table_svm)
+library(caret)
+Confusion_Matrix_Svm<-confusionMatrix(table_svm)
+Confusion_Matrix_Svm
