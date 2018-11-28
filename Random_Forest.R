@@ -1,0 +1,8 @@
+install.package("RandomForest")
+library(RandomForest)
+View(iris)
+split<-sample.split(iris,splitRatio=.7)
+train<-subset(iris,split=="TRUE")
+test<-subset(iris,split=="FALSE")
+model_random<-randomForest(x=train,y=train$Species,ntree=100)
+iris$Species_pre<-predict(model_random,test)
