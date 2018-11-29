@@ -57,6 +57,14 @@ iris2
 ?kmeans
 kmeans.result <- kmeans(iris2, centers = 3, nstart = 20)
 kmeans.result
+kmeans_result$totss
+kmeans_result$withinss
+kmeans_result$tot.withinss
+kmeans_result$betweenss
+kmeans_result$size
+kmeans_result$iter
+kmeans_result$ifault
+
 
 # See the cluster identification for each observation
 kmeans.result$cluster
