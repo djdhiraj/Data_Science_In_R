@@ -74,12 +74,21 @@ table(iris$Species, kmeans.result$cluster)
 
 # Visualizing and interpreting results of k-means()
 plot(iris2[c("Sepal.Length", "Sepal.Width")])
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")])
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")],kmeans_result$cluster)
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")],kmeans_result$cluster,lines=1)
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")],kmeans_result$cluster,lines=4)
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")],kmeans_result$cluster,lines=4,color = TRUE)
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")],kmeans_result$cluster,lines=4,color = TRUE,shade = FALSE)
+clusplot(iris2[,c("Sepal.Length","Sepal.Width")],kmeans_result$cluster,lines=4,color = TRUE,shade = TRUE)
+
 plot(iris2[c("Sepal.Length", "Sepal.Width")], col = kmeans.result$cluster)
 plot(iris2[c("Sepal.Length", "Sepal.Width")], col = kmeans.result$cluster, main = "K-Means with 3 clusters")
 
 # plot cluster centers
 kmeans.result$centers
 kmeans.result$centers[,c("Sepal.Length", "Sepal.Width")]
+
 points(kmeans.result$centers[,c("Sepal.Length", "Sepal.Width")], col = 1:3,pch = 8, cex=3)#cex = font size, pch = symbol
 
 # Visualising the clusters
