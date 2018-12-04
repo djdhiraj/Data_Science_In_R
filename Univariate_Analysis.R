@@ -20,6 +20,13 @@ names(eda_data)
 summary(eda_data$age)
 fivenum(eda_data$age)describe(eda_data$age)
 stat.desc(eda_data$age)
+median(data$age, na.rm=T)
+sd(data$age, na.rm=T)
+var(data$age, na.rm=T)
+quantile(data$age,probs=c(0.01,0.05,0.1,0.25,0.5,0.75))
+discribe(data)
+         
+
 
 
 
