@@ -37,3 +37,15 @@ correlationsubset <- api[c("cst28_engl", "cst28_math", "pctfrpl")]
 cor(correlationsubset, use="complete.obs")
 # Get the correlation matrix
 cor(api[c("cst28_engl", "cst28_math", "pctfrpl")], use="complete.obs")
+data(Prestige,package="car")
+plot(x=Prestige$education, y=Prestige$income,main="Income Vs Education",ylim=c(0,1000))
+abline(lm(income~education,data=Prestige))
+#correlation functions in R
+cor(Prestige$income,Prestige$education)
+cor.test(Prestige$income,Prestige$education)
+boxplot(income~type,data=Prestige,main="Income Vs Occupations Type",ylab="income")
+anovamod<-aov(income~type,data=Prestige)
+summary(anovamod)
+Prestige$income_cat<-dplyr::ntile(Prestige$income,4)
+table(Prestige$income_cat,Prestige$type)
+chisq.test(y=Prestige$income_cat,x=Prestige$type)
