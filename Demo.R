@@ -1,5 +1,0 @@
-data_set=read.csv(file.choose())
-data_set %>% head()
-df=sqldf("select killer_position_x, killer_position_y from data_set")
-df1<-df %>% mutate(Distance=(killer_position_x - victim_position_x)^2 + (killer_position_y - victim_position_y)^2)
-df=sqldf("select  killer_position_x, killer_position_y,victim_position_x, victim_position_y from data_set")
