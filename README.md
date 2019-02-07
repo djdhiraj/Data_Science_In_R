@@ -41,3 +41,27 @@
 # General Data Operations
 
 * head, tail: Return the First or Last Part of   an Object.
+# Math (H2O)
+* abs: Compute the absolute value of x.
+* sign: Return a vector with the signs of the corresponding elements of x (the
+  sign of a real number is 1, 0, or -1 if the number is positive, zero, or negative, respectively).
+
+* sqrt: Computes the principal square root of x, √x.
+
+* ceiling: Take a single numeric argument x and return a numeric vector
+  containing the smallest integers not less than the corresponding elements of x.
+
+* floor: Take a single numeric argument x and return a numeric vector
+  containing the largest integers not greater than the corresponding elements of x.
+
+* trunc: Take a single numeric argument x and return a numeric vector
+  containing the integers formed by truncating the values in x toward 0.
+
+* log: Compute logarithms (by default, natural logarithms).
+* exp: Compute the exponential function.
+
+# Math (generic)
+* cummax: Display a vector of the cumulative maxima of the elements of the argument.
+* cummin: Display a vector of the cumulative minima of the elements of the argument.
+* cumprod: Display a vector of the cumulative products of the elements of the argument.
+
