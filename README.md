@@ -158,7 +158,9 @@
 * h2o.month: Convert the entries of a H2OParsedData object from milliseconds to months (on a 0 to 11 scale).
 * h2o.year: Convert the entries of a H2OParsedData object from milliseconds to years, indexed starting from 1900.
 
-# Matrix Operations %∗%: Multiply two matrices, if they are conformable. t: Given a matrix or data.frame x, t returns the transpose of x.
+# Matrix Operations 
+* %∗%: Multiply two matrices, if they are conformable. 
+* t: Given a matrix or data.frame x, t returns the transpose of x.
 # Data Modeling
 # Model Training: Supervised Learning
 * h2o.deeplearning: Perform Deep Learning neural networks on an
