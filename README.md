@@ -64,4 +64,59 @@
 * cummax: Display a vector of the cumulative maxima of the elements of the argument.
 * cummin: Display a vector of the cumulative minima of the elements of the argument.
 * cumprod: Display a vector of the cumulative products of the elements of the argument.
+* log10: Compute common (i.e., base 10) logarithms
+
+* log2: Compute binary (i.e., base 2) logarithms.
+
+* log1p: Compute log(1+x) accurately also for |x|<< 1.
+
+* acos: Compute the trigonometric arc-cosine.
+
+* acosh: Compute the hyperbolic arc-cosine.
+
+* asin: Compute the trigonometric arc-sine.
+
+* asinh: Compute the hyperbolic arc-sine.
+
+* atan: Compute the trigonometric arc-tangent.
+
+* atanh: Compute the hyperbolic arc-tangent.
+
+* expm1: Compute exp(x) - 1 accurately also for |x|<< 1.
+
+* cos: Compute the trigonometric cosine.
+
+* sinh: Compute the hyperbolic sine.
+
+* sinpi: Compute the trigonometric two-argument arc-sine.
+
+* tan: Compute the trigonometric tangent.
+
+* tanh: Compute the hyperbolic tangent.
+
+* tanpi: Compute the trigonometric two-argument arc-tangent.
+
+* gamma: Display the gamma function γx
+
+* lgamma: Display the natural logarithm of the absolute value of the gamma function.
+
+* digamma: Display the first derivative of the logarithm of the gamma function.
+
+* trigamma: Display the second derivative of the logarithm of the gamma function.
+
+# Math2 (H2O)
+
+* round: Round the values to the specified number of decimal places. The default is 0.
+
+* signif: Round the values to the specified number of significant digits.
+# Summary (H2O)
+
+* max: Display the maximum of all the input arguments.
+* min: Display the minimum of all the input arguments.
+* range: Display a vector containing the minimum and maximum of all the given arguments.
+* sum: Calculate the sum of all the values present in its arguments.
+# Summary (generic)
+* prod: Display the product of all values present in its arguments.
+* any: Given a set of logical vectors, determine if at least one of the values is true.
+* all: Given a set of logical vectors, determine if all of the values are true.
 
