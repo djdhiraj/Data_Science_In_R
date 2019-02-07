@@ -206,39 +206,26 @@ xval.
 # H2O Object Serialization
 # h2o.loadModel: Load an H2OModel object from disk.
 h2o.saveModel: Save an H2OModel object to disk to be loaded back into
-H2O using h2o.loadModel.
-H2O Cluster Connection
-h2o.init (nthreads = -1): Connect to a running H2O instance using
-all CPUs on the host and check the local H2O R package is the correct version.
-h2o.shutdown: Shut down the specified H2O instance. All data on the
-server will be lost!
-h2o.rebalance: Rebalance (repartition) an existing H2O dataset into given
-number of chunks (per Vec), for load-balancing across multiple threads or
-nodes.
-H2O Cluster Information
-h2o.clusterInfo: Display the name, version, uptime, total nodes, total
-memory, total cores and health of a cluster running H2O.
-h2o.clusterStatus: Retrieve information on the status of the cluster
-running H2O.
-H2O Logging
-h2o.clearLog: Clear all H2O R command and error response logs from the
-local disk.
-h2o.downloadAllLogs: Download all H2O log files to the local disk.
-h2o.logAndEcho: Write a message to the H2O Java log file and echo it
-back.
-h2o.openLog: Open existing logs of H2O R POST commands and error
-responses on the local disk.
-h2o.getLogPath: Get the file path for the H2O R command and error
-response logs.
-h2o.startLogging: Begin logging H2O R POST commands and error
-responses.
-h2o.stopLogging: Stop logging H2O R POST commands and error
-responses.
-H2O String Manipulation
-h2o.gsub: String global substitution (all occurrences).
-h2o.strsplit: String Split.
-h2o.sub: String substitution (first occurrence).
-h2o.tolower: Convert characters to lower case.
-h2o.toupper: Convert characters to upper case.
-h2o.trim: Trim spaces.
-
+# H2O using h2o.loadModel.
+# H2O Cluster Connection
+* h2o.init (nthreads = -1): Connect to a running H2O instance using all CPUs on the host and check the local H2O R package is the correct version.
+* h2o.shutdown: Shut down the specified H2O instance. All data on the server will be lost!
+* h2o.rebalance: Rebalance (repartition) an existing H2O dataset into given number of chunks (per Vec), for load-balancing across multiple threads or nodes.
+# H2O Cluster Information
+* h2o.clusterInfo: Display the name, version, uptime, total nodes, total memory, total cores and health of a cluster running H2O.
+* h2o.clusterStatus: Retrieve information on the status of the cluster running H2O.
+# H2O Logging
+* h2o.clearLog: Clear all H2O R command and error response logs from the local disk.
+* h2o.downloadAllLogs: Download all H2O log files to the local disk.
+* h2o.logAndEcho: Write a message to the H2O Java log file and echo it back.
+* h2o.openLog: Open existing logs of H2O R POST commands and error responses on the local disk.
+* h2o.getLogPath: Get the file path for the H2O R command and error response logs.
+* h2o.startLogging: Begin logging H2O R POST commands and error responses.
+* h2o.stopLogging: Stop logging H2O R POST commands and error responses.
+# H2O String Manipulation
+* h2o.gsub: String global substitution (all occurrences).
+* h2o.strsplit: String Split.
+* h2o.sub: String substitution (first occurrence).
+* h2o.tolower: Convert characters to lower case.
+* h2o.toupper: Convert characters to upper case.
+* h2o.trim: Trim spaces.
