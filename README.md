@@ -119,4 +119,50 @@
 * prod: Display the product of all values present in its arguments.
 * any: Given a set of logical vectors, determine if at least one of the values is true.
 * all: Given a set of logical vectors, determine if all of the values are true.
+# Other Aggregations
+# Non-Group Generic Summaries
+* mean: Generic function for the (trimmed) arithmetic mean.
+* sd: Calculate the standard deviation of a column of continuous real valued data.
+* var: Compute the variance of x.
+* summary: Produce result summaries of the results of various model fitting functions.
+* quantile: Obtain and display quantiles for H2O parsed data. Row / Column Aggregation
+* apply: Apply a function over an H2O parsed data object (an array). Group By Aggregation
+* h2o.group by: Apply an aggregate function to each group of an H2O dataset.
+# Tabulation
+* h2o.table: Use the cross-classifying factors to build a table of counts at each combination of factor levels.
+# Data Munging
+# General Column Manipulations
+* is.na: Display missing elements.
+# Element Index Selection
+* h2o.which: Display the row numbers for which the condition is true.
+# Conditional Element Value Selection
+* h2o.ifelse: Apply conditional statements to numeric vectors in H2O parsed data objects.
+
+
+# Numeric Column Manipulations
+
+* h2o.cut: Convert H2O Numeric Data to Factor.
+
+# Character Column Manipulations
+* h2o.strsplit: Splits the given factor column on the input split.
+* h2o.tolower: Change the elements of a character vector to lower case.
+* h2o.toupper: Change the elements of a character vector to lower case.
+* h2o.trim: Remove leading and trailing white space.
+* h2o.gsub: Match a pattern & replace all instances of the matched pattern with the replacement string globally.
+* h2o.sub: Match a pattern & replace the first instance of the matched pattern with the replacement string.
+
+# Factor Level Manipulations
+*h2o.levels: Display a list of the unique values found in a column of categorical data.
+
+# Date Manipulations
+* h2o.month: Convert the entries of a H2OParsedData object from milliseconds to months (on a 0 to 11 scale).
+* h2o.year: Convert the entries of a H2OParsedData object from milliseconds to years, indexed starting from 1900.
+
+# Matrix Operations %∗%: Multiply two matrices, if they are conformable. t: Given a matrix or data.frame x, t returns the transpose of x.
+# Data Modeling
+# Model Training: Supervised Learning
+* h2o.deeplearning: Perform Deep Learning neural networks on an
+* H2OParsedData object.
+* h2o.gbm: Build gradient boosted classification trees and gradient boosted regression trees on a parsed dataset.
+* h2o.glm: Fit a generalized linear model, specified by a response variable, a set of predictors, and a description of the error distribution.
 
