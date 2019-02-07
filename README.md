@@ -27,3 +27,17 @@
 
 * h2o.interaction: Create interaction terms between categorical features
   of an H2O Frame.
+
+# Data Sampling/Splitting
+* h2o.splitFrame: Split an existing H2O dataset    according to user-specified ratios.
+
+# Missing Data Handling
+* h2o.impute: Impute a column of data using the   mean, median, or mode.
+
+* h2o.insertMissingValues: Replaces a   user specified fraction of entries
+  in a H2O dataset with missing values.
+
+
+# General Data Operations
+
+* head, tail: Return the First or Last Part of   an Object.
