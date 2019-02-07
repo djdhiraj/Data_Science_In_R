@@ -168,3 +168,77 @@
 * h2o.gbm: Build gradient boosted classification trees and gradient boosted regression trees on a parsed dataset.
 * h2o.glm: Fit a generalized linear model, specified by a response variable, a set of predictors, and a description of the error distribution.
 
+* h2o.naiveBayes: Build gradient boosted classification trees and gradient boosted regression trees on a parsed dataset.
+* h2o.prcomp: Perform principal components analysis on the given dataset.
+* h2o.randomForest: Perform random forest classification on a dataset.
+* h2o.xgboost: Build an extreme gradient boosted model.
+# Model Training: Unsupervised Learning
+* h2o.anomaly: Detect anomalies in a H2O dataset using a H2O deep learning model with auto-encoding.
+* h2o.deepfeatures: Extract the non-linear features from a H2O dataset using a H2O deep learning model.
+* h2o.kmeans: Perform k-means clustering on a dataset.
+# Grid Search
+* h2o.grid: Efficient method to build multiple models with different
+# hyperparameters.
+# Model Scoring
+* h2o.predict: Obtain predictions from various fitted H2O model objects.
+# Model Metrics
+* ho2.model metrics: Given predicted values (target for regression, class-1 probabilities, or binomial or per-class probabilities for multinomial), compute a model metrics object.
+# Classification Model Helpers
+* h2o.accuracy: Get the between cluster sum of squares.
+* h2o.auc: Retrieve the AUC (area under ROC curve).
+* h2o.confusionMatrix: Display prediction errors for classification data from a column of predicted responses and a column of actual (reference) responses in H2O.
+* h2o.hit ratio table: Retrieve the Hit Ratios. If train, valid, and xval parameters are FALSE (default), then the training Hit Ratios value is returned. If more than one parameter is seto TRUE, then a named list
+of Hit Ratio tables are returned, where the names are train, valid, or
+xval.
+* h2o.performance: Evaluate the predictive performance of a model via various measures.
+# Regression Model Helper
+* h2o.mse: Display the mean squared error calculated from a column of predicted responses and a column of actual (reference) responses in H2O.
+# Clustering Model Helper
+* h2o.betweenss: Get the between cluster sum of squares.
+* h2o.centers: Retrieve the Model Centers.
+# H2O Cluster Operations
+# H2O Key Value Store Access
+* h2o.assign: Assign H2O hex.keys to objects in their R environment.
+* h2o.getFrame: Get a reference to an existing H2O dataset.
+* h2o.getModel: Get a reference to an existing H2O model.
+* h2o.ls: Display a list of object keys in the running instance of H2O.
+* h2o.rm: Remove H2O objects from the server where the instance of H2O is running, but does not remove it from the R environment.
+# H2O Object Serialization
+# h2o.loadModel: Load an H2OModel object from disk.
+h2o.saveModel: Save an H2OModel object to disk to be loaded back into
+H2O using h2o.loadModel.
+H2O Cluster Connection
+h2o.init (nthreads = -1): Connect to a running H2O instance using
+all CPUs on the host and check the local H2O R package is the correct version.
+h2o.shutdown: Shut down the specified H2O instance. All data on the
+server will be lost!
+h2o.rebalance: Rebalance (repartition) an existing H2O dataset into given
+number of chunks (per Vec), for load-balancing across multiple threads or
+nodes.
+H2O Cluster Information
+h2o.clusterInfo: Display the name, version, uptime, total nodes, total
+memory, total cores and health of a cluster running H2O.
+h2o.clusterStatus: Retrieve information on the status of the cluster
+running H2O.
+H2O Logging
+h2o.clearLog: Clear all H2O R command and error response logs from the
+local disk.
+h2o.downloadAllLogs: Download all H2O log files to the local disk.
+h2o.logAndEcho: Write a message to the H2O Java log file and echo it
+back.
+h2o.openLog: Open existing logs of H2O R POST commands and error
+responses on the local disk.
+h2o.getLogPath: Get the file path for the H2O R command and error
+response logs.
+h2o.startLogging: Begin logging H2O R POST commands and error
+responses.
+h2o.stopLogging: Stop logging H2O R POST commands and error
+responses.
+H2O String Manipulation
+h2o.gsub: String global substitution (all occurrences).
+h2o.strsplit: String Split.
+h2o.sub: String substitution (first occurrence).
+h2o.tolower: Convert characters to lower case.
+h2o.toupper: Convert characters to upper case.
+h2o.trim: Trim spaces.
+
